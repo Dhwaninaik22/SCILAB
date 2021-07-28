@@ -1,0 +1,15 @@
+clc;
+clear all;
+close all;
+pt=input('Enter the transmitted power:'); 
+ref1=input('Enter the reflection coefficient of transmitter:'); 
+ref2=input('Enter the reflection coefficient of receiver:'); 
+f=input('Enter the frequency:');
+lam=(3*(10^8))/(f);
+dt=input('Enter the directivity of transmitter in dB:'); 
+dr=input('Enter the directivity of receiver in dB:');
+r=input('Enter the distance between the transmitter and receiver:');
+s=10^(dt/10);
+l=10^(dr/10);
+pr=pt*(1-(ref1)^2)*(1-(ref2)^2)*s*l*((lam/(4*pi*r))^2);
+display(pr);

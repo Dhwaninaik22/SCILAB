@@ -1,0 +1,10 @@
+clc;
+clear all;
+close all;
+N=input('Enter the value of number of elements N=');
+d=input('Enter the value of spacing(d)=');
+thetha=0:0.02:2*pi;
+beta=-2*pi*d;
+si=2*pi*d*cos(thetha)+beta;
+AF=(sin(N.*si./2)./(N.*sin(si./2)));
+polar(thetha,AF);
